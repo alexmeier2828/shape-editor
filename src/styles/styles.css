@@ -1,6 +1,5 @@
 .main-div {
   display: flex;
-  flex-direction: row;
   height:98vh;
   width:98vw;
 
@@ -8,17 +7,46 @@
 
 .control-panel {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  box-sizing: border-box;
   border-style: inset;
   border-width: medium;
   width:  200px;
-  height: auto;
 
 }
 
 .main-canvas {
+  box-sizing: border-box;
   border-style: inset;
   border-width: medium;
-  width: inherit;
-  height: auto;
+  width: 100%;
 }
+
+.dropbtn {
+  background-color:red;
+  width: 100%;
+}
+.dropdown-menu {
+  position: relative;
+  display:inline-block;
+  width: 100%
+}
+.dropdown-content {
+  display: none;
+  flex-direction: column;
+  background-color: green;
+  width:inherit;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  zindex: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content-buttons {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  width: 100%
+}
+
+.dropdown-menu:hover .dropdown-content {display: flex;}
+.dropdown-menu:hover .dropbtn {background-color: #3e8e41;}

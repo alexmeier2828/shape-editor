@@ -5,11 +5,43 @@
 </head>
 <body id="everything" class="main-div">
   <div id="controls" class="control-panel">
-    <p> This is where the controls will go </p>
+    <div id="shapes" class="dropdown-menu">
+      <button class="dropbtn"> Shapes </button>
+      <div class="dropdown-content">
+        <button> Line </button>
+        <button> Triangle </button>
+        <button> Square </button>
+        <button> Rectangle </button>
+        <button> Circle </button>
+        <button> Elipse </button>
+        <button> Curve </button>
+        <button> Poly-Line </button>
+        <button> Polygon </button>
+
+      </div>
+    </div>
+    <div id="transformations" class="dropdown-menu">
+      <button class="dropbtn"> Transoformations </button>
+      <div class="dropdown-content">
+        <button> Select </button>
+        <button> Translate </button>
+        <button> Scale </button>
+      </div>
+    </div>
+    <div id="export" class="dropdown-menu">
+      <button class="dropbtn"> Export </button>
+      <div class="dropdown-content">
+        <button> 1 </button>
+        <button> 2 </button>
+      </div>
+    </div>
   </div>
-  <canvas id="shape-canvas" class="main-canvas">
-    Your browser doesn't support the HTML5 canvas element
-  </canvas>
+  <div class="main-canvas">
+    <canvas id="shape-canvas">
+      Your browser doesn't support the HTML5 canvas element
+    </canvas>
+  </div>
+
 </body>
 
 <script type="text/javascript" src="../script/index.js"></script>
