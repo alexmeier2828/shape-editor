@@ -1,0 +1,24 @@
+.main-div {
+  display: flex;
+  flex-direction: row;
+  height:98vh;
+  width:98vw;
+
+}
+
+.control-panel {
+  display: flex;
+  flex-direction: row;
+  border-style: inset;
+  border-width: medium;
+  width:  200px;
+  height: auto;
+
+}
+
+.main-canvas {
+  border-style: inset;
+  border-width: medium;
+  width: inherit;
+  height: auto;
+}

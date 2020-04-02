@@ -1,0 +1,19 @@
+{
+  "name": "shape-editor",
+  "version": "1.0.0",
+  "description": "ls",
+  "main": "src/script/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexmeier2828/shape-editor.git"
+  },
+  "author": "Alex Meier",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexmeier2828/shape-editor/issues"
+  },
+  "homepage": "https://github.com/alexmeier2828/shape-editor#readme"
+}
