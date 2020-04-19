@@ -6,14 +6,11 @@ class CanvasBuffer {
   }
 
   addShape(shape){
-    this.shapes.push = [];
+    this.shapes.push(shape);
   }
 
   drawAll(ctx){
-    this.shapes.foreach((shape) = {shape.draw(ctx)})
+    this.shapes.forEach((shape) => {shape.draw(ctx)})
   }
 
 }
-
-
-module.exports = CanvasBuffer

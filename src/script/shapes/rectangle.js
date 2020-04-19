@@ -1,4 +1,4 @@
-const util = require("./util");
+
 class Rectangle {
   constructor(x, y, width, height) {
     this.x = x;
@@ -10,7 +10,7 @@ class Rectangle {
     this.rotate = 0;
   }
   draw(ctx){
-    util.transform(this._draw(ctx), ctx, this.offset, this.rotate);
+    transform(() => this._draw(ctx), ctx, this.offset, this.rotate);
   }
   _draw(ctx){
     ctx.fillRect(this.x, this.y, this.width, this.height);

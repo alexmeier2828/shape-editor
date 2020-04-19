@@ -10,8 +10,10 @@ var ctx = canvas.getContext('2d');
 
 //main function
 function main() {
-
-
+    buffer = new CanvasBuffer();
+    rect = new Rectangle(50, 50, 50, 40);
+    buffer.addShape(rect);
+    buffer.drawAll(ctx);
 }
 
 
