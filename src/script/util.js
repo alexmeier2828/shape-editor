@@ -7,3 +7,9 @@ function transform(drawFunc, ctx, translate, rotate){
 
   //run transforms backwards to reset the canvas
 }
+
+
+function drawShape(shape){
+  buffer.addShape(shape);
+  buffer.drawAll(ctx);
+}
