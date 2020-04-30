@@ -15,11 +15,15 @@
 
 }
 
-.main-canvas {
+.canvas-container {
   box-sizing: border-box;
   border-style: inset;
   border-width: medium;
   width: 100%;
+  height: auto;
+}
+.inner-canvas {
+
 }
 
 .dropbtn {

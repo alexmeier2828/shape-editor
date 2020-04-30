@@ -17,4 +17,8 @@ class Line {
     ctx.lineTo(this.x1, this.y1);
     ctx.stroke();
   }
+
+  inside(x, y){
+    return pointInRectangle(this.x0, this.y0, this.x1, this.y1, x - this.offset[0] ,y - this.offset[1])
+  }
 }
