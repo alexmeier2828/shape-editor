@@ -41,11 +41,15 @@ document.getElementById("triangle").onclick = (e) => {
 }
 
 document.getElementById("square").onclick = (e) => {
-
+  shape = new Square();
+  drawShape(shape, shape_keys);
+  selected = shape_keys;
+  shape_keys ++;
+  transformFunction = translate;
 }
 
 document.getElementById("rectangle").onclick = (e) => {
-  shape = new Rectangle(40, 50)
+  shape = new Rectangle(40, 50);
   drawShape(shape, shape_keys);
   selected = shape_keys;
   shape_keys ++;
@@ -77,7 +81,9 @@ document.getElementById("polygon").onclick = (e) => {
   Transform buttons
   These buttons select which transform you want
 */
-
+document.getElementById("select").onclick = (e) => {
+  transformFunction = (shape, e)=>{};  //do nothing
+}
 
 document.getElementById("translate").onclick = (e) => {
   transformFunction = translate
