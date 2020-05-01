@@ -11,13 +11,19 @@ class Rectangle {
     console.log(this);
   }
   draw(ctx){
-    transform(() => this._draw(ctx), ctx, this.offset, this.rotate);
+    transform(() => this._draw(ctx), ctx, this.offset, this.rotate, this.scale);
   }
   _draw(ctx){
     ctx.fillRect(this.x, this.y, this.width, this.height);
   }
 
   inside(x, y){
-    return pointInRectangle(this.x + this.offset[0], this.y + this.offset[1], this.x + this.width  + this.offset[0], this.y + this.height  + this.offset[1], x ,y)
+
+    let x0 = this.x;
+    let y0 = this.y;
+    let x1 = (this.x + this.width);
+    let y1 = (this.y + this.height);
+    return pointInRectangle(x0, y0, x1, y1, (x - this.offset[0])/this.scale[0]  ,(y - this.offset[1])/this.scale[1])
+
   }
 }

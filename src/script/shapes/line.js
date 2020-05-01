@@ -9,7 +9,7 @@ class Line {
     this.rotate = 0;
   }
   draw(ctx){
-    transform(() => this._draw(ctx), ctx, this.offset, this.rotate);
+    transform(() => this._draw(ctx), ctx, this.offset, this.rotate, this.scale);
   }
   _draw(ctx){
     ctx.beginPath();
@@ -19,6 +19,10 @@ class Line {
   }
 
   inside(x, y){
-    return pointInRectangle(this.x0, this.y0, this.x1, this.y1, x - this.offset[0] ,y - this.offset[1])
+    let x0 = this.x0;
+    let y0 = this.y0;
+    let x1 = this.x1;
+    let y1 = this.y1;
+    return pointInRectangle(x0, y0, x1, y1, (x - this.offset[0])/this.scale[0]  ,(y - this.offset[1])/this.scale[1])
   }
 }

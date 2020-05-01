@@ -7,7 +7,7 @@ document.getElementById("shape-canvas").addEventListener('mousemove', (e)=>{
   if(selected == null){
 
   } else {
-    transformFunction(shape, e)
+    transformFunction(buffer.getShape(selected), e)
   }
 
 
@@ -24,6 +24,7 @@ document.getElementById("shape-canvas").onclick = (e)=>{
 
     console.log(`${x}, ${y}`)
     selected = buffer.getShapeAt(x, y);
+    console.log(buffer.getShape(selected))
   }
 }
 
