@@ -55,7 +55,12 @@ document.getElementById("line").onclick = (e) => {
 }
 
 document.getElementById("triangle").onclick = (e) => {
-
+  clearSelection();
+  shape = new Polygon(3);
+  drawShape(shape, shape_keys);
+  selected = shape_keys;
+  shape_keys ++;
+  transformFunction = translate;
 }
 
 document.getElementById("square").onclick = (e) => {
@@ -77,11 +82,21 @@ document.getElementById("rectangle").onclick = (e) => {
 }
 
 document.getElementById("circle").onclick = (e) => {
-
+  clearSelection();
+  shape = new Circle();
+  drawShape(shape, shape_keys);
+  selected = shape_keys;
+  shape_keys ++;
+  transformFunction = translate;
 }
 
 document.getElementById("elipse").onclick = (e) => {
-
+  clearSelection();
+  shape = new Elipse();
+  drawShape(shape, shape_keys);
+  selected = shape_keys;
+  shape_keys ++;
+  transformFunction = translate;
 }
 
 document.getElementById("curve").onclick = (e) => {
@@ -105,7 +120,13 @@ document.getElementById("poly-line").onclick = (e) => {
 }
 
 document.getElementById("polygon").onclick = (e) => {
-
+  clearSelection();
+  let sides = parseInt(document.getElementById("sides").value)
+  shape = new Polygon(sides);
+  drawShape(shape, shape_keys);
+  selected = shape_keys;
+  shape_keys ++;
+  transformFunction = translate;
 }
 
 

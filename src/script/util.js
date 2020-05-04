@@ -47,6 +47,17 @@ function translate(shape, e){
   buffer.drawAll(ctx);
 }
 
+function generateRegularPolygon(points, r){
+  let delta = (2*Math.PI)/points;
+  polygon = [];
+  for(i = 0; i < points; i ++ ){
+    let theta = i*delta;
+    let x = r * Math.sin(theta);
+    let y = r * Math.cos(theta);
+    polygon.push([x, y]);
+  }
+  return polygon;
+}
 
 
 

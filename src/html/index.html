@@ -13,10 +13,11 @@
         <button id="square"> Square </button>
         <button id="rectangle"> Rectangle </button>
         <button id="circle"> Circle </button>
-        <button id="elipse"> Elipse </button>
+        <button id="elipse"> Ellipse </button>
         <button id="curve"> Curve </button>
         <button id="poly-line"> Poly-Line </button>
         <button id="polygon"> Polygon </button>
+        <input id="sides" type="number" min="3" max="50" value="5"> Sides </input>
 
       </div>
     </div>
@@ -31,8 +32,7 @@
     <div id="export" class="dropdown-menu">
       <button class="dropbtn"> Export </button>
       <div class="dropdown-content">
-        <button> 1 </button>
-        <button> 2 </button>
+        <button id="png"> png </button>
       </div>
     </div>
   </div>
@@ -46,7 +46,10 @@
 <script type="text/javascript" src="../script/shapes/multiline.js"></script>
 <script type="text/javascript" src="../script/shapes/line.js"></script>
 <script type="text/javascript" src="../script/shapes/rectangle.js"></script>
+<script type="text/javascript" src="../script/shapes/circle.js"></script>
+<script type="text/javascript" src="../script/shapes/elipse.js"></script>
 <script type="text/javascript" src="../script/shapes/square.js"></script>
+<script type="text/javascript" src="../script/shapes/polygon.js"></script>
 <script type="text/javascript" src="../script/canvasBuffer.js"></script>
 <script type="text/javascript" src="../script/index.js"></script>
 <script type="text/javascript" src="../script/actionListeners.js"></script>
