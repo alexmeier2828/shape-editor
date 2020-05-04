@@ -100,7 +100,19 @@ document.getElementById("elipse").onclick = (e) => {
 }
 
 document.getElementById("curve").onclick = (e) => {
-
+  clearSelection();
+  MULTI_POINT_MODE = true;
+  multiLine = new Curve();
+  selected = shape_keys;
+  shape_keys ++;
+  transformFunction = (shape, e) =>{
+    rect = e.target.getBoundingClientRect();
+    let x = e.clientX - rect.left;
+    let y = e.clientY - rect.top;
+    shape.movePoint(x, y)
+    buffer.drawAll(ctx);
+  }
+  drawShape(multiLine, selected);
 }
 
 document.getElementById("poly-line").onclick = (e) => {

@@ -5,8 +5,8 @@ Computer Graphics I -- Term Project
 */
 
 var canvas = document.getElementById('shape-canvas');
-canvas.width = 500;
-canvas.height = 500;
+canvas.width = 1000;
+canvas.height = 1000;
 var ctx = canvas.getContext('2d');
 
 var buffer = new CanvasBuffer(canvas);
