@@ -149,6 +149,14 @@ document.getElementById("scale").onclick = (e) => {
   transformFunction = scale
 }
 
+document.getElementById("png").onclick = (e) => {
+  clearSelection();
+  url = canvas.toDataURL("export/png");
+  document.write(`<img src="${url}"/>`);
+}
+
+
+
 
 function clearSelection(){
   if(MULTI_POINT_MODE){
